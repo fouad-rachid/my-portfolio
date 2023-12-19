@@ -1,0 +1,128 @@
+@import '../../app.scss';
+
+
+.hero{
+    height: calc(100vh - 100px);
+    // background: linear-gradient(180deg,#0c0c1d,#111132);5E62A1
+    background: linear-gradient(180deg,#111132,#5E62A1);
+     // background: linear-gradient(180deg,#ef7c18,#6111b7);
+    // background: linear-gradient(180deg,#5E62A1,#FFB173);
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    
+
+    .wrapper {
+        max-width: 1366px;
+        height: 100%;
+        margin: auto   ;
+        .textContainer{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction:column;
+            justify-content:center;
+            gap: 33px;
+            
+
+            @include mobile{
+                width:100%;
+                height:50%;
+                gap:20px;
+                align-items:center;
+                text-align:center;
+            }
+
+            h2{
+                font-size: 30px;
+                color: rebeccapurple;
+                // color: #6B395C;
+                letter-spacing: 10px;
+            }
+
+            h1{
+                font-size:88px;
+                // color: white;
+                
+            @include mobile{
+                font-size:33px;
+            }
+            }
+
+            .buttons{
+                 button{
+                    padding: 20px;
+                    color: white;
+                    background-color: transparent;
+                    border-radius: 10px;
+                    border: 1px solid white;
+                    margin-right: 20px;
+                    cursor:pointer;
+
+                    
+                 }
+                 
+                 #bt{
+                    background-color: rgb(221, 221, 221);
+                    color: #111132;
+
+                    }
+            }
+
+    
+        
+
+            img{
+                width: 50px;
+                height:50px;
+                object-fit:cover;
+
+            }
+        }
+    }
+
+
+
+    .imageContainer{
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        img{
+            height:140%;
+            width:100%;
+            object-fit:cover;
+            
+
+        }
+
+        @include mobile{
+           
+            height:50%;
+            width: 100%;
+            top:unset;
+            bottom: 0;
+
+        }
+    
+    }
+
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 43vh;
+        bottom: -96px;
+        white-space: nowrap;
+        // color: #ffffff09;
+        color: #a875f427;
+        width: 50%;
+        font-weight: bold;
+        z-index:-1;
+        
+
+
+
+
+    }
+}
